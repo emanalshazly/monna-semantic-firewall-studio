@@ -13,6 +13,19 @@ This log records major decisions and evidence of work performed during OpenAI Bu
 - Created a dedicated OpenAI project API key stored locally in an ignored environment file.
 - Created the public GitHub repository.
 
+## 2026-07-16 — First runnable vertical slice
+
+- Implemented a dependency-free Node.js web application and visual studio.
+- Added a sample laboratory ontology and a versioned strict taxonomy.
+- Implemented stable ontology hashing, lightweight ontology linting, path validation, taxonomy compilation, and fail-closed decision records.
+- Added `ADMIT`, `HUMAN_REVIEW`, and `HARD_REFUSE` governance states.
+- Added explicit epistemic provenance: model proposals are untrusted; ontology edges and compiled policy are authoritative.
+- Connected GPT-5.6 through the Responses API with strict JSON Schema output.
+- Added eight fixed BEM-RITE-inspired adversarial and role-boundary probes.
+- Verified six engine tests, an 8/8 stress suite, and a live `ADMIT / AUTHORIZED_PATH` request.
+- Visually inspected the four-area interface and confirmed no browser console errors.
+- Published the runnable source, sample data, and tests to the public repository.
+
 ## Decision record
 
 ### DR-001 — Deterministic final authority
@@ -33,4 +46,14 @@ This log records major decisions and evidence of work performed during OpenAI Bu
 
 **Reason:** It permits reliable graph validation, a strong demo, and complete testing within the submission window. RDF/OWL support remains a post-MVP extension.
 
+### DR-004 — Framework selection, not framework accumulation
 
+**Decision:** Use UFO-MON, AGPF, epistemic provenance, speech-act routing, and BEM-RITE only where they create an executable check or visible evaluation.
+
+**Reason:** The product must remain understandable in a three-minute demo. Predictive processing, Theory of Mind, conceptual blending, social identity, enactivism, and full belief revision are deferred.
+
+### DR-005 — Three-way governed decision
+
+**Decision:** Structural failures are hard refusals. Ambiguity and governed change requests route to human review.
+
+**Reason:** A missing graph edge cannot be overridden at runtime, while a legitimate policy or ontology change requires accountable human authority.
