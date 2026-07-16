@@ -1,0 +1,12 @@
+{
+  "version": "tax-lab-001",
+  "ontology_version": "1.0.0",
+  "mode": "STRICT",
+  "minimum_depth": 1,
+  "allowed_paths": [
+    { "id": "centrifuge-max-rpm", "entry_class": "Centrifuge", "steps": [{ "edge_id": "maxRPM", "target": "xsd:int" }] },
+    { "id": "instrument-serial", "entry_class": "Instrument", "steps": [{ "edge_id": "serialNumber", "target": "xsd:string" }] },
+    { "id": "operator-measurement-instrument", "entry_class": "Operator", "steps": [{ "edge_id": "performs", "target": "Measurement" }, { "edge_id": "usesInstrument", "target": "Instrument" }] },
+    { "id": "measurement-protocol", "entry_class": "Measurement", "steps": [{ "edge_id": "governedBy", "target": "Protocol" }] }
+  ]
+}
