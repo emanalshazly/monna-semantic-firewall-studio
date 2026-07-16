@@ -31,7 +31,7 @@ function renderGraph(ontology) {
 }
 
 function renderBootstrap(data) {
-  $("#apiStatus").textContent = data.api_ready ? `${data.model} / API READY` : "API KEY REQUIRED";
+  $("#apiStatus").textContent = data.api_ready ? `${data.model} / API READY` : "DEMO FIXTURE MODE";
   $("#classCount").textContent = data.lint.counts.classes;
   $("#edgeCount").textContent = data.lint.counts.edges;
   $("#lintPill").textContent = data.lint.valid ? "VALID STRUCTURE" : "ISSUES FOUND";
