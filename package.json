@@ -1,0 +1,15 @@
+{
+  "name": "monna-semantic-firewall-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A governed semantic firewall for ontology-grounded AI agents.",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
