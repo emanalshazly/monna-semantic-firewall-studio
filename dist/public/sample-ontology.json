@@ -1,0 +1,25 @@
+{
+  "name": "Lab Operations Ontology",
+  "version": "1.0.0",
+  "classes": [
+    { "id": "Lab", "label": "Laboratory", "kind": "object", "level": "individual_type" },
+    { "id": "Instrument", "label": "Instrument", "kind": "object", "level": "individual_type" },
+    { "id": "Centrifuge", "label": "Centrifuge", "kind": "object", "level": "individual_type" },
+    { "id": "Spectrometer", "label": "Spectrometer", "kind": "object", "level": "individual_type" },
+    { "id": "Protocol", "label": "Protocol", "kind": "normative_description", "level": "individual_type" },
+    { "id": "Operator", "label": "Operator", "kind": "role", "level": "individual_type" },
+    { "id": "Measurement", "label": "Measurement", "kind": "event", "level": "individual_type" },
+    { "id": "xsd:int", "label": "Integer", "kind": "datatype", "level": "individual_type" },
+    { "id": "xsd:string", "label": "String", "kind": "datatype", "level": "individual_type" }
+  ],
+  "edges": [
+    { "id": "contains", "source": "Lab", "target": "Instrument", "relation_kind": "relator" },
+    { "id": "specializes", "source": "Centrifuge", "target": "Instrument", "relation_kind": "classification" },
+    { "id": "specializes", "source": "Spectrometer", "target": "Instrument", "relation_kind": "classification" },
+    { "id": "maxRPM", "source": "Centrifuge", "target": "xsd:int", "relation_kind": "quality" },
+    { "id": "serialNumber", "source": "Instrument", "target": "xsd:string", "relation_kind": "quality" },
+    { "id": "performs", "source": "Operator", "target": "Measurement", "relation_kind": "participation" },
+    { "id": "usesInstrument", "source": "Measurement", "target": "Instrument", "relation_kind": "participation" },
+    { "id": "governedBy", "source": "Measurement", "target": "Protocol", "relation_kind": "normative" }
+  ]
+}
