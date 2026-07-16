@@ -21,7 +21,7 @@ Official deadline: **July 21, 2026 at 5:00 PM Pacific Time** — **July 22 at 3:
 - [x] Setup and supported-platform instructions.
 - [ ] Public, free demo URL that requires no rebuild or judge-owned API key.
 - [ ] Add basic public-demo rate limiting and abuse controls.
-- [ ] Complete at least 30 fixed evaluation cases and publish the results.
+- [x] Complete at least 30 fixed evaluation cases and publish the results.
 - [ ] Verify deployed behavior from a clean browser.
 
 ## Repository
