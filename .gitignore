@@ -9,4 +9,18 @@ coverage/
 .DS_Store
 Thumbs.db
 
-
+# Internal governance source material: keep AGPF/Qaf/GAGE working files
+# in the private workspace, never in the public hackathon repository.
+private/
+internal/
+secrets/
+**/AGPF*
+**/Qaf*
+**/*GAGE*
+**/*GAD*
+**/*QOI*
+**/*Governance*Package*
+**/*Governance*Framework*
+**/*Persona*Governance*
+*.pem
+*.key
