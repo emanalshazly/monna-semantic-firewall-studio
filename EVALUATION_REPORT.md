@@ -2,7 +2,8 @@
 
 **Date:** July 16, 2026  
 **Suite:** `data/stress-cases.json`  
-**Result:** **30 / 30 passed**
+**Recorded result:** **30 / 30 passed**
+**Current reproducibility command:** `npm test`
 
 ## Claim under test
 
@@ -59,6 +60,8 @@ The engine then applies:
 
 The primary invariant held for every fixed case: no missing edge was admitted.
 
+This result is deterministic evidence only. It does not include or validate GPT interpretation quality, a browser session, or deployment behavior.
+
 ## Reproduce
 
 ```bash
@@ -69,7 +72,7 @@ The same cases can be inspected visually from the **Stress Lab** area of the app
 
 ## Remaining evaluation work
 
-Before final submission:
+Still required before a release or public demo claim:
 
 - rerun the complete suite from a clean clone;
 - verify deployed behavior in a clean browser;
