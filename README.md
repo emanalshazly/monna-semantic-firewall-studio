@@ -4,6 +4,8 @@
 
 A governed semantic firewall for ontology-grounded AI agents, built for OpenAI Build Week 2026.
 
+[![Deterministic CI](https://github.com/emanalshazly/monna-semantic-firewall-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/emanalshazly/monna-semantic-firewall-studio/actions/workflows/ci.yml)
+
 ## What it does
 
 GPT-5.6 converts a natural-language request into a schema-constrained semantic path proposal. The proposal is explicitly marked as untrusted. Deterministic code then checks every class and ordered edge against the active ontology and compiled taxonomy before returning one of three auditable decisions:
@@ -96,6 +98,8 @@ npm test
 
 The deterministic test suite does not call the OpenAI API. The Stress Lab can also be run from the browser.
 
+The fixed 30/30 result applies only to candidate paths supplied directly to the deterministic engine. No current live-model interpretation, clean-clone browser, or deployment receipt is committed. See [Evidence matrix](EVIDENCE_MATRIX.md).
+
 ## Two-minute judge flow
 
 1. Open **Runtime Gate** and run “What is the maximum RPM of the centrifuge?” to show a grounded `ADMIT`.
@@ -123,8 +127,8 @@ Codex was used during Build Week to:
 - design the JSON ontology, taxonomy, candidate-path, and decision contracts;
 - implement the deterministic engine and Responses API integration;
 - create the visual product experience and sample data;
-- generate and run engine, adversarial, and browser-level checks;
-- identify a live-model edge case where cautious interpretation omitted an unsupported step;
+- generate engine and adversarial checks, plus a browser test plan;
+- document a historical live-model observation separately from deterministic evidence;
 - prepare provenance, setup, evaluation, and submission documentation.
 
 The human author made the core product decisions: separating interpretation from authority, choosing the lightweight governance layers, limiting the security claim, and excluding research modules that could not be honestly demonstrated.
